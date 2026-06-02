@@ -1,3 +1,5 @@
 com\mycompany\perfume\controllers\PrincipalController.class
+com\mycompany\perfume\controllers\controllerAdmin\InterfazAdminController.class
 com\mycompany\perfume\sistema\cargador.class
+com\mycompany\perfume\pojo\Perfume.class
 com\mycompany\perfume\sistema\PerfumeSistema.class

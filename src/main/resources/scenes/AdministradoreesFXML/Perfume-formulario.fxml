@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" styleClass="mainFxmlClass" stylesheets="@../../styles/interfaz-admin.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.perfume.controllers.controllerAdmin.InterfazAdminController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../styles/interfaz-admin.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane fx:id="root" layoutX="315.0" layoutY="127.0" prefHeight="200.0" prefWidth="200.0" styleClass="contenido" stylesheets="@../../styles/interfaz-admin.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <VBox fx:id="sidebar" prefHeight="700.0" prefWidth="250.0" spacing="13.0" style="-fx-background-color: #FFFFFF;" styleClass="contenido" stylesheets="@../../styles/interfaz-admin.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <StackPane prefHeight="38.0" prefWidth="250.0">
+                           <children>
+                              <Button fx:id="btn_sidebar" mnemonicParsing="false" onAction="#ocultarSidebar" prefHeight="35.0" prefWidth="80.0" styleClass="btn-default">
+                                 <StackPane.margin>
+                                    <Insets left="160.0" />
+                                 </StackPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/cerrar-sesion.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="45.0" prefWidth="250.0" styleClass="color-default">
+                           <VBox.margin>
+                              <Insets top="75.0" />
+                           </VBox.margin>
+                           <children>
+                              <Button fx:id="btn_menuAdmin" mnemonicParsing="false" prefHeight="30.0" prefWidth="250.0" styleClass="btn-menu-admin" stylesheets="@../../styles/interfaz-admin.css" text="Resumen " StackPane.alignment="CENTER">
+                                 <StackPane.margin>
+                                    <Insets top="40.0" />
+                                 </StackPane.margin>
+                              </Button>
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="45.0" prefWidth="250.0">
+                           <children>
+                              <Button fx:id="btn_inventario" mnemonicParsing="false" prefHeight="50.0" prefWidth="253.0" styleClass="btn-default" text="Perfumes" StackPane.alignment="CENTER" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="45.0" prefWidth="250.0">
+                           <children>
+                              <Button fx:id="btn_empleados" mnemonicParsing="false" prefHeight="50.0" prefWidth="253.0" styleClass="btn-default" text="Inventario" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="99.0" prefWidth="250.0">
+                           <children>
+                              <Button fx:id="btn_reportes" mnemonicParsing="false" prefHeight="50.0" prefWidth="253.0" styleClass="btn-default" text="Empleados">
+                                 <StackPane.margin>
+                                    <Insets bottom="100.0" />
+                                 </StackPane.margin>
+                              </Button>
+                           </children>
+                        </StackPane>
+                        <Region prefHeight="33.0" prefWidth="250.0" />
+                     </children>
+                  </VBox>
+               </left>
+               <top>
+                  <AnchorPane prefHeight="102.0" prefWidth="1100.0" styleClass="contenido" stylesheets="@../../styles/interfaz-admin.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="200.0" styleClass="bar-title" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#mostrarSidebar" prefHeight="47.0" prefWidth="118.0" styleClass="btn-menu" HBox.hgrow="ALWAYS">
+                                 <graphic>
+                                    <ImageView fitHeight="65.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/sidebar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Region prefHeight="86.0" prefWidth="342.0" HBox.hgrow="ALWAYS" />
+                              <ImageView fitHeight="101.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@../../images/logotransparente.png" />
+                                 </image>
+                              </ImageView>
+                              <Region prefHeight="86.0" prefWidth="243.0" HBox.hgrow="ALWAYS" />
+                              <ImageView fitHeight="45.0" fitWidth="62.0" HBox.hgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@../../images/icono-user.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="texto-topbar" text="Administrador" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="3.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <center>
+                  <AnchorPane fx:id="centro" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFFFFF;" styleClass="contenedorFormulario" stylesheets="@../../styles/interfaz-admin.css" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </VBox.margin>
+                                 <content>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" styleClass="contenedorFormulario">
+                                       <children>
+                                          <GridPane prefHeight="559.0" prefWidth="818.0" VBox.vgrow="ALWAYS">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="436.6" minWidth="10.0" prefWidth="430.1999755859375" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="418.5999755859375" minWidth="10.0" prefWidth="387.8000244140625" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="56.20001525878906" minHeight="10.0" prefHeight="52.199999999999996" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="158.60000610351562" minHeight="10.0" prefHeight="36.20000000000002" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="129.60000762939453" minHeight="0.0" prefHeight="83.79997558593752" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="129.60000762939453" minHeight="10.0" prefHeight="67.39999389648438" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="129.60000762939453" minHeight="10.0" prefHeight="66.60003662109375" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="129.60000762939453" minHeight="10.0" prefHeight="103.5999755859375" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="129.60000762939453" minHeight="10.0" prefHeight="96.40002441406256" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="62.0" prefWidth="398.0" styleClass="center-titulo" text="Agregar-Perfumes">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" top="20.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label styleClass="textoNormal" text="Nombre del perfume" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="50.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TextField promptText="Ingresa el nombre del perfume" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets right="40.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Label styleClass="textoNormal" text="Marca" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="50.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TextField prefHeight="26.0" prefWidth="369.0" promptText="Ingresa la marca" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <GridPane.margin>
+                                                      <Insets right="40.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Label styleClass="textoNormal" text="Familia olfativa" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="50.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TextField prefHeight="26.0" prefWidth="369.0" promptText="Ingresa la familia olfativa" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <GridPane.margin>
+                                                      <Insets right="40.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="28.0" styleClass="boton-dinero" text="\$" GridPane.rowIndex="4" />
+                                                <TextField prefHeight="31.0" prefWidth="344.0" promptText="Ingresa el costo del perfume" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets left="28.0" right="40.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Label prefHeight="66.0" prefWidth="46.0" styleClass="textoNormal" text="Precio" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
+                                                   <padding>
+                                                      <Insets bottom="50.0" />
+                                                   </padding>
+                                                </Label>
+                                                <Separator prefHeight="4.0" prefWidth="466.0" GridPane.rowIndex="5">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="50.0" />
+                                                   </GridPane.margin>
+                                                </Separator>
+                                                <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="50.0" />
+                                                   </GridPane.margin>
+                                                </Separator>
+                                                <Label styleClass="textoNormal" text="Notas de sálida" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="50.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TextField prefHeight="26.0" prefWidth="197.0" promptText="Ej. Bergamota, Manzana, Limon " GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets right="220.0" />
+                                                   </GridPane.margin>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </TextField>
+                                                <Label styleClass="textoNormal" text="Notas de corazón" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="50.0" left="285.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TextField prefHeight="26.0" prefWidth="195.0" promptText="Ej Lavanda, Jazmin. " GridPane.hgrow="ALWAYS" GridPane.rowIndex="6">
+                                                   <GridPane.margin>
+                                                      <Insets left="240.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Label styleClass="textoNormal" text="Notas de fondo" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="50.0" left="80.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TextField prefHeight="26.0" prefWidth="195.0" promptText="Ej. Vainilla, Ambar" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" right="150.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Label styleClass="textoNormal" text="Descripción" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="80.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TextArea prefHeight="57.0" prefWidth="50.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" top="35.0" />
+                                                   </GridPane.margin>
+                                                </TextArea>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

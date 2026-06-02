@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" styleClass="mainFxmlClass" stylesheets="@../../styles/interfaz-admin.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.perfume.controllers.controllerAdmin.InterfazAdminController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../styles/interfaz-admin.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane fx:id="root" layoutX="315.0" layoutY="127.0" prefHeight="200.0" prefWidth="200.0" styleClass="contenido" stylesheets="@../../styles/interfaz-admin.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <VBox fx:id="sidebar" prefHeight="700.0" prefWidth="250.0" spacing="13.0" style="-fx-background-color: #FFFFFF;" styleClass="contenido" stylesheets="@../../styles/interfaz-admin.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <StackPane prefHeight="38.0" prefWidth="250.0">
+                           <children>
+                              <Button fx:id="btn_sidebar" mnemonicParsing="false" onAction="#ocultarSidebar" prefHeight="35.0" prefWidth="80.0" styleClass="btn-default">
+                                 <StackPane.margin>
+                                    <Insets left="160.0" />
+                                 </StackPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/cerrar-sesion.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="45.0" prefWidth="250.0" styleClass="color-default">
+                           <VBox.margin>
+                              <Insets top="75.0" />
+                           </VBox.margin>
+                           <children>
+                              <Button fx:id="btn_menuAdmin" mnemonicParsing="false" prefHeight="30.0" prefWidth="250.0" styleClass="btn-menu-admin" stylesheets="@../../styles/interfaz-admin.css" text="Resumen " StackPane.alignment="CENTER">
+                                 <StackPane.margin>
+                                    <Insets top="40.0" />
+                                 </StackPane.margin>
+                              </Button>
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="45.0" prefWidth="250.0">
+                           <children>
+                              <Button fx:id="btn_inventario" mnemonicParsing="false" prefHeight="50.0" prefWidth="253.0" styleClass="btn-default" text="Perfumes" StackPane.alignment="CENTER" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="45.0" prefWidth="250.0">
+                           <children>
+                              <Button fx:id="btn_empleados" mnemonicParsing="false" prefHeight="50.0" prefWidth="253.0" styleClass="btn-default" text="Inventario" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="99.0" prefWidth="250.0">
+                           <children>
+                              <Button fx:id="btn_reportes" mnemonicParsing="false" prefHeight="50.0" prefWidth="253.0" styleClass="btn-default" text="Empleados">
+                                 <StackPane.margin>
+                                    <Insets bottom="100.0" />
+                                 </StackPane.margin>
+                              </Button>
+                           </children>
+                        </StackPane>
+                        <Region prefHeight="33.0" prefWidth="250.0" />
+                     </children>
+                  </VBox>
+               </left>
+               <top>
+                  <AnchorPane prefHeight="102.0" prefWidth="1100.0" styleClass="contenido" stylesheets="@../../styles/interfaz-admin.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="200.0" styleClass="bar-title" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#mostrarSidebar" prefHeight="47.0" prefWidth="118.0" styleClass="btn-menu" HBox.hgrow="ALWAYS">
+                                 <graphic>
+                                    <ImageView fitHeight="65.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/sidebar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Region prefHeight="86.0" prefWidth="342.0" HBox.hgrow="ALWAYS" />
+                              <ImageView fitHeight="101.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@../../images/logotransparente.png" />
+                                 </image>
+                              </ImageView>
+                              <Region prefHeight="86.0" prefWidth="243.0" HBox.hgrow="ALWAYS" />
+                              <ImageView fitHeight="45.0" fitWidth="62.0" HBox.hgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@../../images/icono-user.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="texto-topbar" text="Administrador" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="3.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <center>
+                  <AnchorPane fx:id="centro" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox prefHeight="6.0" prefWidth="500.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label styleClass="center-titulo" text="Bienvenido, Jefe.">
+                                       <VBox.margin>
+                                          <Insets left="15.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label styleClass="center-textoNormal" text="Resumen general de la tienda">
+                                       <VBox.margin>
+                                          <Insets left="15.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <HBox prefHeight="245.0" prefWidth="850.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <StackPane alignment="CENTER_LEFT" centerShape="false" prefHeight="230.0" prefWidth="270.0" scaleShape="false" styleClass="card" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="25.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <ImageView fitHeight="128.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/perfumeStock-icono.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="46.0" prefWidth="145.0" styleClass="texto-topbar" text="Perfumes registrados" wrapText="true">
+                                             <StackPane.margin>
+                                                <Insets bottom="75.0" left="125.0" />
+                                             </StackPane.margin>
+                                          </Label>
+                                          <Label prefHeight="54.0" prefWidth="154.0" styleClass="pane-numero" text="1000">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <StackPane.margin>
+                                                <Insets left="120.0" top="35.0" />
+                                             </StackPane.margin></Label>
+                                          <Separator prefWidth="200.0">
+                                             <StackPane.margin>
+                                                <Insets top="150.0" />
+                                             </StackPane.margin>
+                                          </Separator>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane alignment="CENTER_LEFT" centerShape="false" prefHeight="230.0" prefWidth="270.0" scaleShape="false" styleClass="card" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="117.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/perfumeDisponible-icono.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Label prefHeight="46.0" prefWidth="145.0" styleClass="texto-topbar" text="Perfumes disponibles" wrapText="true">
+                                             <StackPane.margin>
+                                                <Insets bottom="75.0" left="125.0" />
+                                             </StackPane.margin>
+                                          </Label>
+                                          <Label prefHeight="54.0" prefWidth="154.0" styleClass="pane-numero" text="50">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <StackPane.margin>
+                                                <Insets left="130.0" top="35.0" />
+                                             </StackPane.margin>
+                                          </Label>
+                                          <Separator prefWidth="200.0">
+                                             <StackPane.margin>
+                                                <Insets top="150.0" />
+                                             </StackPane.margin>
+                                          </Separator>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="25.0" />
+                                       </HBox.margin>
+                                    </StackPane>
+                                    <StackPane alignment="CENTER_LEFT" centerShape="false" prefHeight="230.0" prefWidth="270.0" scaleShape="false" styleClass="card" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Separator prefWidth="200.0">
+                                             <StackPane.margin>
+                                                <Insets top="150.0" />
+                                             </StackPane.margin>
+                                          </Separator>
+                                          <ImageView fitHeight="110.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/perfumesVendidos-icon.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                          <Label prefHeight="50.0" prefWidth="125.0" styleClass="texto-topbar" text="Perfumes vendidos" wrapText="true">
+                                             <StackPane.margin>
+                                                <Insets bottom="75.0" left="125.0" />
+                                             </StackPane.margin>
+                                          </Label>
+                                          <Label prefHeight="54.0" prefWidth="154.0" styleClass="pane-numero" text="12">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <StackPane.margin>
+                                                <Insets left="130.0" top="35.0" />
+                                             </StackPane.margin>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" top="25.0" />
+                                       </HBox.margin>
+                                    </StackPane>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="292.0" prefWidth="850.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <StackPane alignment="CENTER_LEFT" centerShape="false" prefHeight="286.0" prefWidth="850.0" scaleShape="false" styleClass="card" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label prefHeight="47.0" prefWidth="363.0" styleClass="center-titulo" text="Perfumes más vendidos">
+                                             <StackPane.margin>
+                                                <Insets bottom="210.0" left="10.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator prefWidth="200.0">
+                                             <StackPane.margin>
+                                                <Insets top="210.0" />
+                                             </StackPane.margin>
+                                          </Separator>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </StackPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
