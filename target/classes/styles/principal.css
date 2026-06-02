@@ -1,0 +1,59 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.color-topbar{
+    -fx-background-color: #FFFFFF;
+}
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+    -fx-cursor: hand;
+}
+
+.menu-button .label {
+    -fx-text-fill: #111111;
+}
+
+.menu-button .arrow {
+    -fx-background-color: #111111;
+}
+
+.context-menu {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1;
+    -fx-padding: 4 0 4 0;
+}
+
+.menu-item {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 8 18 8 18;
+}
+
+.menu-item .label {
+    -fx-text-fill: #777777;
+    -fx-font-size: 14px;
+}
+
+.menu-item:hover {
+    -fx-background-color: #F5F5F5;
+}
+
+.color-color{
+    -fx-background-color: #111111
+}
+
+.banner-card {
+    -fx-background-color: white;
+
+    -fx-background-radius: 15;
+
+    -fx-border-color: #2E3192;
+    -fx-border-width: 3;
+
+    -fx-border-radius: 15;
+}
