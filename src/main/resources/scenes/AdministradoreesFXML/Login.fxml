@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rootLogin" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to bottom right, #F7F2E9, #E9E2D2);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.perfumeria.controller.LoginController">
+
+    <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <ImageView fx:id="imgFondo" fitHeight="784.0" fitWidth="1482.0" preserveRatio="false" smooth="true">
+            <image>
+                <Image url="@../../images/PerfumesF.png" />
+            </image>
+        </ImageView>
+
+        <HBox maxHeight="Infinity" maxWidth="Infinity" spacing="0.0">
+            <StackPane minWidth="480.0" prefWidth="640.0" HBox.hgrow="ALWAYS">
+                <padding>
+                    <Insets bottom="40.0" left="50.0" right="30.0" top="40.0" />
+                </padding>
+            </StackPane>
+            <StackPane minWidth="520.0" prefWidth="640.0" HBox.hgrow="ALWAYS">
+                <padding>
+                    <Insets bottom="50.0" left="70.0" right="70.0" top="50.0" />
+                </padding>
+
+                   <VBox alignment="CENTER" maxWidth="460.0" prefHeight="650.0" prefWidth="435.0" spacing="22.0" style="-fx-background-color: rgba(255,255,255,0.78);                              -fx-background-radius: 32;                              -fx-border-radius: 32;                              -fx-border-color: rgba(255,255,255,0.85);                              -fx-border-width: 1;                              -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18), 30, 0.12, 0, 8);">
+                    <padding>
+                        <Insets bottom="45.0" left="45.0" right="45.0" top="55.0" />
+                    </padding>
+
+                       <!-- Logo -->
+                    <ImageView fx:id="imgLogo" fitHeight="155.0" fitWidth="398.0" preserveRatio="true" smooth="true">
+                        <!-- Aquí va el logo de COLIBRI -->
+                        <image>
+                            <Image url="@../../images/logo_colibri.png" />
+                        </image>
+                    </ImageView>
+
+                       <Region prefHeight="8.0" />
+
+                       <Label style="-fx-font-size: 26px; -fx-font-weight: 600; -fx-text-fill: #102B35;" text="Iniciar sesión" />
+
+                       <Label style="-fx-font-size: 14px; -fx-text-fill: #6D7774;" text="Accede a tu cuenta para continuar." />
+
+                       <TextField fx:id="txtCorreo" prefHeight="48.0" promptText="Correo electrónico" style="-fx-background-color: rgba(255,255,255,0.85);                                       -fx-background-radius: 14;                                       -fx-border-radius: 14;                                       -fx-border-color: #D8D1C4;                                       -fx-font-size: 14px;                                       -fx-padding: 0 16 0 16;" />
+
+                       <PasswordField fx:id="txtPassword" prefHeight="48.0" promptText="Contraseña" style="-fx-background-color: rgba(255,255,255,0.85);                                           -fx-background-radius: 14;                                           -fx-border-radius: 14;                                           -fx-border-color: #D8D1C4;                                           -fx-font-size: 14px;                                           -fx-padding: 0 16 0 16;" />
+
+                       <Button fx:id="btnIniciarSesion" maxWidth="Infinity" onAction="#clicIniciarSesion" prefHeight="50.0" style="-fx-background-color: linear-gradient(to right, #0E3A4A, #008C8C);                                    -fx-background-radius: 14;                                    -fx-text-fill: white;                                    -fx-font-size: 17px;                                    -fx-font-weight: 500;                                    -fx-cursor: hand;" text="Iniciar sesión" />
+
+                       <HBox alignment="CENTER" spacing="20.0">
+                        <Hyperlink fx:id="linkCrearCuenta" style="-fx-text-fill: #0E6373; -fx-font-size: 13px;" text="Crear cuenta" />
+                    </HBox>
+
+                   </VBox>
+            </StackPane>
+
+        </HBox>
+    </StackPane>
+</AnchorPane>

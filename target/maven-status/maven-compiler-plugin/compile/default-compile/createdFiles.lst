@@ -1,3 +1,4 @@
+com\mycompany\perfume\controllers\controllerAdmin\PerfumeFormularioController.class
 com\mycompany\perfume\controllers\PrincipalController.class
 com\mycompany\perfume\controllers\controllerAdmin\InterfazAdminController.class
 com\mycompany\perfume\sistema\cargador.class
