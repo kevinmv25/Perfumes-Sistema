@@ -97,7 +97,7 @@
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="139.0" prefWidth="1280.0" styleClass="color-topbar" stylesheets="@../styles/principal.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="191.0" styleClass="menu-button" text="Fragancias" HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#sceneVista" prefHeight="39.0" prefWidth="191.0" styleClass="menu-button" text="Fragancias" HBox.hgrow="ALWAYS" />
                         <Region prefHeight="140.0" prefWidth="321.0" HBox.hgrow="ALWAYS" />
                         <ImageView fitHeight="150.0" fitWidth="277.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                            <image>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="720" prefWidth="1280" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.perfume.controllers.CarritoController">
+
+    <center>
+        <HBox spacing="35" style="-fx-background-color: white;">
+            <padding>
+                <Insets bottom="30" left="35" right="35" top="30" />
+            </padding>
+           <HBox alignment="CENTER_LEFT" prefHeight="519.0" prefWidth="20.0" style="-fx-background-color: white; -fx-border-color: #E6E6E6; -fx-border-width: 0 0 1 0;">
+               <padding>
+                   <Insets left="35" />
+               </padding>
+           </HBox>
+
+            <VBox prefWidth="820" spacing="15">
+
+                <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-border-color: #E6E6E6; -fx-border-width: 0 0 1 0; -fx-padding: 0 0 12 0;">
+
+                    <Label prefWidth="440" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #777777;" text="Producto" />
+
+                    <Label prefWidth="120" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #777777;" text="Precio" />
+
+                    <Label prefWidth="140" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #777777;" text="Cantidad" />
+
+                    <Label prefWidth="130" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #777777;" text="Subtotal" />
+                </HBox>
+
+                <ScrollPane fx:id="scrollCarrito" fitToWidth="true" prefHeight="472.0" prefWidth="762.0" style="-fx-background-color: white; -fx-background: white;">
+
+                    <content>
+                        <VBox fx:id="contenedorCarrito" spacing="0" style="-fx-background-color: white;" />
+                    </content>
+
+                </ScrollPane>
+
+            </VBox>
+
+            <VBox prefHeight="519.0" prefWidth="461.0" spacing="20" style="-fx-background-color: white; -fx-border-color: #E0E0E0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 25;">
+
+                <Label style="-fx-font-size: 21px; -fx-font-weight: bold; -fx-text-fill: #202428;" text="Resumen del pedido" />
+
+                <HBox alignment="CENTER_LEFT" spacing="160">
+                    <Label style="-fx-font-size: 15px;" text="Subtotal" />
+                    <Label fx:id="lblSubtotal" style="-fx-font-size: 15px;" text="0.00" />
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="190">
+                    <Label style="-fx-font-size: 15px;" text="Envío" />
+                    <Label style="-fx-font-size: 15px;" text="0.00" />
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="190" style="-fx-border-color: #E0E0E0; -fx-border-width: 1 0 0 0; -fx-padding: 18 0 0 0;">
+                    <Label style="-fx-font-size: 17px; -fx-font-weight: bold;" text="Total" />
+                    <Label fx:id="lblTotal" style="-fx-font-size: 17px; -fx-font-weight: bold;" text="0.00" />
+                </HBox>
+
+                <Button fx:id="btnPagar" maxWidth="360" prefHeight="55" style="-fx-background-color: #202428; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="IR A PAGAR" />
+            </VBox>
+
+        </HBox>
+    </center>
+   <top>
+      <AnchorPane prefHeight="140.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="139.0" prefWidth="1280.0" styleClass="color-topbar" stylesheets="@../styles/principal.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#sceneVista" prefHeight="39.0" prefWidth="191.0" styleClass="menu-button" text="Fragancias" HBox.hgrow="ALWAYS" />
+                  <Region prefHeight="140.0" prefWidth="321.0" HBox.hgrow="ALWAYS" />
+                  <ImageView fitHeight="150.0" fitWidth="277.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Region prefHeight="140.0" prefWidth="136.0" HBox.hgrow="ALWAYS" />
+                  <MenuButton mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" stylesheets="@../styles/principal.css" text="MenuButton" HBox.hgrow="ALWAYS">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                     </items>
+                  </MenuButton>
+                  <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="36.0" styleClass="menu-button" stylesheets="@../styles/principal.css" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="57.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="36.0" styleClass="menu-button" stylesheets="@../styles/principal.css" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="57.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/favorito.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="36.0" styleClass="menu-button" stylesheets="@../styles/principal.css" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="57.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/ChatGPT%20Image%2031%20may%202026,%2007_15_39%20p.m.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="36.0" styleClass="menu-button" stylesheets="@../styles/principal.css" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/carrito.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label prefHeight="18.0" prefWidth="33.0" text="0" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+
+</BorderPane>
