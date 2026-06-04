@@ -2,10 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -104,8 +101,6 @@
 
                                         <Label style="-fx-font-size: 15; -fx-text-fill: #6E7074;" text="Ordenar por:" />
 
-                                        <ComboBox fx:id="cmbOrdenar" prefWidth="190" promptText="Nombre del producto" />
-
                                         <Region HBox.hgrow="ALWAYS" />
 
                                         <Label style="-fx-font-size: 15; -fx-text-fill: #6E7074;" text="Mostrar:" />
@@ -132,12 +127,6 @@
                            </image>
                         </ImageView>
                         <Region prefHeight="140.0" prefWidth="136.0" HBox.hgrow="ALWAYS" />
-                        <MenuButton mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" stylesheets="@../styles/principal.css" text="MenuButton" HBox.hgrow="ALWAYS">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="Action 1" />
-                              <MenuItem mnemonicParsing="false" text="Action 2" />
-                           </items>
-                        </MenuButton>
                         <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="36.0" styleClass="menu-button" stylesheets="@../styles/principal.css" HBox.hgrow="ALWAYS">
                            <graphic>
                               <ImageView fitHeight="57.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
@@ -165,10 +154,10 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="cantidad" prefHeight="26.0" prefWidth="22.0" text=" 0" />
+                        <Label fx:id="cantidad" prefHeight="26.0" prefWidth="16.0" text=" 0" />
                         <Button mnemonicParsing="false" onAction="#sceneCarrito" prefHeight="43.0" prefWidth="36.0" styleClass="menu-button" stylesheets="@../styles/principal.css" HBox.hgrow="ALWAYS">
                            <graphic>
-                              <ImageView fitHeight="41.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="40.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../images/carrito.png" />
                                  </image>

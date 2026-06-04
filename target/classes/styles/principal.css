@@ -57,3 +57,25 @@
 
     -fx-border-radius: 15;
 }
+
+.boton-interfaces-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-text-fill: #7A7A7A;
+
+    -fx-font-family: "Poppins";
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.boton-interfaces-btn:hover {
+    -fx-text-fill: #111111;
+}
+
+.boton-interfaces-btn:pressed {
+    -fx-text-fill: #02BBC4;
+}

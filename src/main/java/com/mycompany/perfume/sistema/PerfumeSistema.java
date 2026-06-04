@@ -23,7 +23,8 @@ public class PerfumeSistema extends Application {
     public void start(Stage stage) throws Exception {
 
         FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/scenes/principal.fxml")
+                getClass().getResource("/scenes/detallesPerfume.fxml")
+                //getClass().getResource("/scenes/principal.fxml")
                 //getClass().getResource("/scenes/vistaPerfumes.fxml")
                 //getClass().getResource("/scenes/AdministradoreesFXML/Perfume-formulario.fxml")
         );
